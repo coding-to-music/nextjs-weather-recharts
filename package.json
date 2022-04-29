@@ -2,7 +2,7 @@
   "name": "nextjs-weather-recharts",
   "version": "3.0.0",
   "engines": {
-    "node": "16.x"
+    "node": "14"
   },
   "cacheDirectories": [
     "node_modules",
