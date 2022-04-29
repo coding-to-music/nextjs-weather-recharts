@@ -1,10 +1,18 @@
 {
-  "name": "weathernaut",
+  "name": "nextjs-weather-recharts",
   "version": "3.0.0",
+  "engines": {
+    "node": "16.x"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    ".next/cache"
+  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "git add . && git commit -m Build && git push && git push heroku && heroku logs --tail --remote heroku"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.11",

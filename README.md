@@ -1,3 +1,24 @@
+# nextjs-weather-recharts
+
+# 🚀 Javascript full-stack 🚀
+
+https://github.com/coding-to-music/nextjs-weather-recharts
+
+https://nextjs-weather-recharts.vercel.app
+
+https://nextjs-weather-recharts.herokuapp.com
+
+by Steven Del Rosario https://github.com/stevendelro
+
+https://github.com/stevendelro/Weathernaut
+
+## Environment Values
+
+```java
+
+  API_KEY: process.env.API_KEY,
+```
+
 ## Table of Contents
 
 - [Project History](#project-history)
@@ -17,12 +38,13 @@
 
 ## Project History
 
-Weathernaut is the *third* iteration of a weather app that I made back in March 2020.
+Weathernaut is the _third_ iteration of a weather app that I made back in March 2020.
 
->**NOTE**
->In this first section, I'll be discussing the two iterations before Weathernaut, so if you're looking for Weathernaut-specific information, use the table of contents above to get where ever you want to be.
+> **NOTE**
+> In this first section, I'll be discussing the two iterations before Weathernaut, so if you're looking for Weathernaut-specific information, use the table of contents above to get where ever you want to be.
 
 ### Iteration 1 redux-weather
+
 ###### [LIVE DEMO](https://redux-weather.now.sh/) | [SOURCE CODE](https://github.com/stevendelro/redux-weather)
 
 When the pandemic hit America, I decided to hit the keyboard. It had been a few months since I even attempted to code anything, so I was pretty rusty. The first order of business was to make an app that grabs data from an external API. So of course, a weather app fit the bill perfectly.
@@ -52,6 +74,7 @@ axios
   })
   .catch(error => console.log('Error making geocode call: ', error))
 ```
+
 Once I got the data coming in, I incorporated redux in order to manage app state.
 
 I've made apps in the past with redux once before, so this time it wasn't too difficult. All the stateful components in this app were still class based, so there wasn't anything really groundbreaking. I was still really proud of it though.
@@ -62,8 +85,8 @@ I even made a gif:
 
 ![](https://github.com/stevendelro/redux-weather/blob/master/demo.gif?raw=true)
 
-
 ### Iteration 2 Umbrellapp
+
 ###### [LIVE DEMO](https://umbrellapp.now.sh/) | [SOURCE CODE](https://github.com/stevendelro/react-weather-dashboard)
 
 Sweet. So I got all caught up with my old React skills. The next order of business was to wrap my head around React Hooks.
@@ -72,13 +95,13 @@ Sweet. So I got all caught up with my old React skills. The next order of busine
 
 Initially, I thought that I should make a completely different type of app.
 
-I mean, I was so tired of looking at the same code. But, I restrained myself. I needed to make things easier for me, not more difficult--regardless if the difficult route would ultimately bear more fruits of knowledge. The goal right now wasn't knowledge accumulation. I need to keep myself focused on the very specific goal of *producing* finished work.
+I mean, I was so tired of looking at the same code. But, I restrained myself. I needed to make things easier for me, not more difficult--regardless if the difficult route would ultimately bear more fruits of knowledge. The goal right now wasn't knowledge accumulation. I need to keep myself focused on the very specific goal of _producing_ finished work.
 
 So, at a bare minimum, what could take this weather app to the next level?
 
-* The app looks horrible. I definitely need to implement some kind of solution to address the looks.
-* Doing a complete rewrite with React Hooks would be much easier now, since the majority of the logic was already figured out.
-* There was *a ton* of unused data leftover that I havent used. I should defnitely do something with that data.
+- The app looks horrible. I definitely need to implement some kind of solution to address the looks.
+- Doing a complete rewrite with React Hooks would be much easier now, since the majority of the logic was already figured out.
+- There was _a ton_ of unused data leftover that I havent used. I should defnitely do something with that data.
 
 With that in mind, I did some research. I read blogs, I looked through subreddits, I even looked at the projects that some of my favorite Udemy instructors were working on or had recently produced in their tutorials. I decided that I really liked the Material UI documentation. Some of it was over my head, but I could figure it out.
 
@@ -93,6 +116,7 @@ What resulted from that was, Umbrellapp:
 ![](https://arbletur.sirv.com/gifs/umbrellapp15fps.gif)
 
 ### Iteration 3 Weathernaut
+
 ###### [LIVE DEMO](https://weathernaut.now.sh/) | [SOURCE CODE](https://github.com/stevendelro/Weathernaut)
 
 Umbrellapp was so rewarding to create and finish. It, by far, was the most professional looking thing I've ever created. But, we need to go deeper.
@@ -111,10 +135,10 @@ NextJS had just released 9.3 where they offered next-gen static site generation 
 
 Some of Umbrellapp's downsides:
 
-* It's codebase is horribly disorganized. The main Dashboard component has 349 lines of code.
-* I didn't put that much focus on what it would feel like to come back to this project after a year. The main goal was just to make the thing look cool and work.
-* I was so focused on understanding how to use Material UI's components, that I didn't really pay attention to some pretty big UI flaws that were occurring on the front end.
-* As a single page app, the API key was exposed for anyone to take and use as they please.
+- It's codebase is horribly disorganized. The main Dashboard component has 349 lines of code.
+- I didn't put that much focus on what it would feel like to come back to this project after a year. The main goal was just to make the thing look cool and work.
+- I was so focused on understanding how to use Material UI's components, that I didn't really pay attention to some pretty big UI flaws that were occurring on the front end.
+- As a single page app, the API key was exposed for anyone to take and use as they please.
 
 There's many more. Trust me. Yeah, the app looks light years better than the original, but only to my friends and family. If you actually look at the code from a developer's prespective, it's pretty hacky.
 
@@ -124,18 +148,17 @@ NextJS makes you think about building React apps in such a different way. First 
 
 Some key points about the building of Weathernaut:
 
-* All source code has been completely refactored to be modular, easy to read, well commented, and very maintainable.
-* Dynamic page based routing with NextJS.
-* Replaced the large useReducer hook with by wapping the entire up with a Redux wrapper.
-* Implementation of serverless functions to protect API keys.
-* Material-UI custom theming makes changing the look and feel of the app as simple as changing two variables.
-* State will persist (per session) on page reload with redux-persist.
-* Many small improvements with the UI/UX.
+- All source code has been completely refactored to be modular, easy to read, well commented, and very maintainable.
+- Dynamic page based routing with NextJS.
+- Replaced the large useReducer hook with by wapping the entire up with a Redux wrapper.
+- Implementation of serverless functions to protect API keys.
+- Material-UI custom theming makes changing the look and feel of the app as simple as changing two variables.
+- State will persist (per session) on page reload with redux-persist.
+- Many small improvements with the UI/UX.
 
 And of course, a gif for you:
 
 ![](https://arbletur.sirv.com/gifs/weathernaut.gif)
-
 
 ## Built With
 
@@ -157,14 +180,14 @@ This section should list any major frameworks that you built your project using.
 ## Getting Started
 
 > **NOTE**
-> The Darksky API was just acquired by Apple, so unfortunately, they are no longer accepting API signups for new API keys. On March 31st, 2020: *"Our API service for existing customers is not changing today, but we will no longer accept new signups. The API will continue to function through the end of 2021. As part of this transition, use of Dark Sky by Apple is subject to the Apple Privacy Policy, which can be found at apple.com/privacy."*
+> The Darksky API was just acquired by Apple, so unfortunately, they are no longer accepting API signups for new API keys. On March 31st, 2020: _"Our API service for existing customers is not changing today, but we will no longer accept new signups. The API will continue to function through the end of 2021. As part of this transition, use of Dark Sky by Apple is subject to the Apple Privacy Policy, which can be found at apple.com/privacy."_
 
 ### Prerequisites
 
 1. You'll need a MapBox API key. Sign up to get one [here](https://account.mapbox.com/auth/signin/).
 2. ~~You'll need a DarkSky API key~~ **No longer available.**
 
-*A future update will replace the Darksky API with weatherstack.com, stay tuned.)*
+_A future update will replace the Darksky API with weatherstack.com, stay tuned.)_
 
 ### Installation
 
@@ -195,19 +218,19 @@ DARKSKY_KEY=7601daeb3e11b6f49672afaebbb45cc1
 yarn build
 ```
 
-
 5. Fire it up:
 
 ```jsx
 yarn start
 ```
+
 6. Head over to `localhost:3000` and see it in action.
 
 ## Usage
 
 1. The app will ask for your permission to use your browser's geolocation coordinates. If you accept, it will automatically fetch your local weather data. If you deny, you will be presented with a search bar.
 2. Search for weather.
-3. Find out whether or not *(get it?)* you'll need an umbrella.
+3. Find out whether or not _(get it?)_ you'll need an umbrella.
 
 ## Roadmap
 
@@ -252,43 +275,43 @@ Project Link: [https://github.com/stevendelro/Weathernaut](https://github.com/st
 
 ### The Quick Answer (Starting with React):
 
-*If you're more of a visual learner that loves explanations:*
+_If you're more of a visual learner that loves explanations:_
 
-I'd suggest this Stephen Grider course. He goes all out with diagrams in order to visualize concepts in order to mentally conceptualize what exactly is happening and why. His teaching style can be very long and drawn out, but it's extremely thorough. If you have a tough time fully understanding how all the parts work, Stephen Grider would be my suggested instructor for you. 
+I'd suggest this Stephen Grider course. He goes all out with diagrams in order to visualize concepts in order to mentally conceptualize what exactly is happening and why. His teaching style can be very long and drawn out, but it's extremely thorough. If you have a tough time fully understanding how all the parts work, Stephen Grider would be my suggested instructor for you.
 
-*If you're a hands on type:*
+_If you're a hands on type:_
 
 I'd suggest Andrew Mead's React course. His teaching style is well paced and thoroughly thought out. The way he introduces new concepts and how he implements pauses for you to complete small challenges are extremely consistent, which helps for the student to pay attention on understanding the material, as opposed to having to figure out what exactly is happening.
 
-*It might help to fully complete a course of your choosing, then build something similar to it on your own afterwards, while referencing the same course whenever you get stuck. Other than that, there's no shortcut. Just keep making things!*
+_It might help to fully complete a course of your choosing, then build something similar to it on your own afterwards, while referencing the same course whenever you get stuck. Other than that, there's no shortcut. Just keep making things!_
 
 ### The Long Answer (Starting from zero):
 
-* **Gain foundational knowledge** 
+- **Gain foundational knowledge**
 
 I'd start with one of the long learning tracks on: https://teamtreehouse.com/tracks. Don't bother with the techdegree stuff, just get a basic account.
 
 Begin learning HTML, CSS, and how to navigate the terminal. Move onto Javascript and get really familiar with strings, arrays, object and even ES6. A lot of problem solving comes with knowing how to manipulate arrays objects and strings.
 
-* **Read other people's code. Explain code out loud.**
+- **Read other people's code. Explain code out loud.**
 
 Along the way, start looking at other people's code. Preferably, someone who is around your level of understanding, or even just a bit higher. Learn how to talk about code with other. Learn how the data travels through the code and how it transforms as it goes through functions and conditionals.
 
-* **Begin reading documentation**
+- **Begin reading documentation**
 
 It's super tough to read documentation when you first start out, which is why it's really important to start sooner. Documentation is the main human interface of any technology, so start reading and explaining how code works to yourself and to others. Embrace the weird jargon and complicated fancy words. It may seem silly but it's necessary to truly communicate what is happening to others at scale.
 
-* **Expand beyond teamtreehouse, build projects**
+- **Expand beyond teamtreehouse, build projects**
 
 When you feel comfortable with javascript and ES6 syntax, it's time to move through a legitimate React course. You should be able to parse through the Facebook documentation by this point, so that's always a great place to start, but if you are anything similar to me, you may prefer some tactile, explicit instruction.
 
 Teamtreehouse has some great React content and it's always evolving. I racked up over a 1000 points in a single week on the teamtreehouse platform when I first started. It's a good place to interact with peers of similar ability. I was just under 10,000 points when I moved onto Udemy courses.
 
-* **BUILD PROJECTS**
+- **BUILD PROJECTS**
 
 Before you fall into the tutorial black hole, start building projects on your own. I built a mortgage calculator, change calculator, budget tracker, multiple weather apps and a To Do app. While building these apps, I ran into problems and I used Udemy tutorials to help me understand and eventually resolve my problems. The trick is to make a project slightly similar to the tutorial project (slightly similar meaning: completely different features, but same overall idea) that way you aren't just copy and pasting code. Having different features means that you can't get all the answers from the tutorial.
 
-* **Beginning tutorials**
+- **Beginning tutorials**
 
 Speaking of Udemy courses, be careful of what courses you choose to take. You will forever be influenced by your instructors. You are learning and can be easily influenced, so pick your influences carefully. I suggest, first and foremost, [Andrew Mead's](https://www.udemy.com/user/andrewmead/) courses. Complete all the challenges in each video and you will learn faster. He has great pacing and his teaching style is really dialed in and his lessons flow as if he planned them out for months before shooting.
 
@@ -298,14 +321,50 @@ If you are a visual learner and enjoy diagrams and long explanations, [Stephen G
 
 I've heard good things about [Colt Steele's](https://www.udemy.com/user/coltsteele/) work, but never personally took any of his React courses. His [data structures and algorithms course](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/) is worth checking out though.
 
-* **Intermediate Tutorials**
+- **Intermediate Tutorials**
 
 If you are a quick learner and find many of these tutorials way too long and boring, I suggest looking into [Reed Barger's](https://www.udemy.com/user/reed-barger/) content. Many of his courses are slightly outdated, but his teaching style and the code he writes is top notch. His pacing is ripping fast, but the value per minute of time you get from his courses is incredible. It's a good change of pace after taking 40+ hour tutorials. If you can keep up, it's worth taking the time to be influenced by his style.
 
 [Thomas Weibenfalk](https://www.udemy.com/user/thomas-928/) has some incredible work. His content is geared towards those who are fairly intermediate, but his personality and teaching style make his courses really enjoyable.
 
-* **Advanced tutorials**
+- **Advanced tutorials**
 
 By this point you should understand how important it is to be influenced by the best people out there. The very best people out there are found on [frontendmasters.com](https://frontendmasters.com/courses/). You have the biggest names in the industry teaching courses on there. They also have a bunch of learning tracks on there, but most of their courses are taught in a lecture style (think: one -> to many), which isn't as direct as the Udemy courses are (think: one -> to one). Nevertheless, once you can keep up with them, make it a habit to be influenced by them regularly.
 
 Hope this helps! Good luck!
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/nextjs-weather-recharts.git
+git push -u origin main
+```
+
+## Heroku
+
+```java
+heroku create nextjs-weather-recharts
+```
+
+## Heroku MongoDB Environment Variables
+
+```java
+heroku config:set
+
+heroku config:set MONGODB_URI="your value"
+```
+
+## Push to Heroku
+
+```java
+git push heroku
+
+# or
+
+npm run deploy
+```
