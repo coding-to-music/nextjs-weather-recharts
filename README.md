@@ -15,8 +15,11 @@ https://github.com/stevendelro/Weathernaut
 ## Environment Values
 
 ```java
+process.env.MAPBOX_KEY
 
-  API_KEY: process.env.API_KEY,
+process.env.DARKSKY_KEY
+
+darkSkiesUrl = `https://api.darksky.net/forecast/${process.env.DARKSKY_KEY}/`
 ```
 
 ## Table of Contents
