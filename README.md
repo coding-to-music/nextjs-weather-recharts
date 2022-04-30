@@ -22,6 +22,20 @@ process.env.DARKSKY_KEY
 darkSkiesUrl = `https://api.darksky.net/forecast/${process.env.DARKSKY_KEY}/`
 ```
 
+## Darksky.net got sold to Apple in 2020 and no longer gives out API keys
+
+"We are no longer accepting new signups."
+
+"Please see our blog post for more information."
+
+https://blog.darksky.net/
+
+```java
+By Adam Grossman on July 1, 2020.
+
+Update: Service to existing users and subscribers of the Android app will now continue until August 1, 2020, at which point the app will be shut down. Subscribers who are active at that time will receive a full refund. Weather forecasts, maps, and embeds available on the Dark Sky website will also shut down on August 1, 2020.
+```
+
 ## Table of Contents
 
 - [Project History](#project-history)
