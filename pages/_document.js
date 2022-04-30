@@ -1,7 +1,7 @@
-import React from 'react'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheets } from '@material-ui/core/styles'
-import theme from '../styles/theme/theme'
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import { ServerStyleSheets } from "@material-ui/core/styles";
+import theme from "../styles/theme/theme";
 
 export default class MyDocument extends Document {
   render() {
@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
           <link
-            href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css"
+            href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css"
             rel="stylesheet"
           />
         </Head>
@@ -41,20 +41,20 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-MyDocument.getInitialProps = async ctx => {
-  const sheets = new ServerStyleSheets()
-  const originalRenderPage = ctx.renderPage
+MyDocument.getInitialProps = async (ctx) => {
+  const sheets = new ServerStyleSheets();
+  const originalRenderPage = ctx.renderPage;
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: App => props => sheets.collect(<App {...props} />),
-    })
+      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+    });
 
-  const initialProps = await Document.getInitialProps(ctx)
+  const initialProps = await Document.getInitialProps(ctx);
 
   return {
     ...initialProps,
@@ -63,5 +63,5 @@ MyDocument.getInitialProps = async ctx => {
       ...React.Children.toArray(initialProps.styles),
       sheets.getStyleElement(),
     ],
-  }
-}
+  };
+};
