@@ -15,7 +15,7 @@ https://github.com/stevendelro/Weathernaut
 ## Environment Values
 
 ```java
-process.env.MAPBOX_KEY
+process.env.MAPBOX_API_ACCESS_TOKEN
 
 process.env.DARKSKY_KEY
 
